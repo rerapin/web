@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lkc4uxo.css">
+    <link rel="stylesheet" href="style.css">
+    <title>rera shimizu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+      var loader = $('.loader-wrap');
+
+      //ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+      setTimeout(function(){
+        loader.fadeOut();
+      },3000);
+    });
+    </script>
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'uqm4qdg',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+  </head>
+  <body>
+    <div class="loader-wrap">
+    <div class="loader">Loading...</div></div>
+    <div class="wrap">
+    <header>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="globalMenuSp">
+          <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+      <div class="menu">
+        <h1>
+          <a href="index.html">
+          <img src="img/logo.png" alt="rerashimizu-logo">
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrappingpaper">
+        <h2>Coming Soon</h2>
+      </div>
+  </main>
+    <footer>
+      <div class="footer-menu">
+        <p><a href="index.html"><img src="img/logo-s.png" alt="rerashimizu"></a></p>
+        <ul>
+          <li><a href="index.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-small">
+      <p><small>Privacy Policy</small></p>
+      </div>
+    </footer>
+</div>
+  </body>
+</html>
+
