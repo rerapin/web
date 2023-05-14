@@ -28,6 +28,35 @@ header .menu {
   justify-content: space-between;
   padding-top: 3.37vw;
 }
+header h1 img{
+  width: 16.59vw;
+}
+header .menu ul{
+  display: flex;
+  justify-content: space-between;
+  width: 29vw;
+  font-family: arboria, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 8.2rem;
+  letter-spacing: .04em;
+}
+header .menu ul li {
+  padding-left: 1.2vw;
+}
+header .menu ul li a:hover {
+  color: #B8B8B8;
+}
+header h3 {
+  padding-top: 10.317vw;
+  font-family: "arboria", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: .04em;
+  font-size: 13.75rem;
+  color: #565656;
+  width: 50.85vw;
+}
 /*　ハンバーガーメニューボタン　*/
 .hamburger {
   display : block;
@@ -75,6 +104,7 @@ header .menu {
   -moz-transform   : rotate(30deg);
   transform        : rotate(30deg);
 }
+
 /* メニュー背景　*/
 nav.globalMenuSp {
   position: fixed;
@@ -82,68 +112,47 @@ nav.globalMenuSp {
   top  : 0;
   left : 0;
   color: #565656;
-  background: url(img/pc-main-bg.jpg) top/cover;
+  background: url(img/pc-main-bg.jpg) center/cover;
   text-align: left;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   opacity: 0;
+  display: none;
   transition: opacity .6s ease, visibility .6s ease;
-  pointer-events: none;
 }
+
 nav.globalMenuSp ul {
-  padding-top: 17.24vh;
-  padding-left: 10.66vw;
+  margin: 0 auto;
+  padding: 13.87vh 0 0 10.66vw;
   width: 100%;
 }
+
 nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
   width: 100%;
   transition: .4s all;
-  padding-bottom: 5.24vh;
 }
-/*nav.globalMenuSp ul li:last-child {
-}*/
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+
 nav.globalMenuSp ul li a {
   display: block;
   color: #565656;
   font-size: 2.5rem;
-  font-weight: 400;
   letter-spacing: .4em;
+  font-weight: 400;
+  padding: 1em 0;
+  text-decoration :none;
+}
+nav.globalMenuSp ul li a:hover {
+color: #B8B8B8;
 }
 /* クリックでjQueryで追加・削除 */
 nav.globalMenuSp.active {
   opacity: 100;
   display: block;
-}
-/*navの記述終了*/
-
-header h1 img{
-  width: 16.59vw;
-}
-header .menu ul{
-  display: flex;
-  justify-content: space-between;
-  width: 29vw;
-  font-family: arboria, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 8.2rem;
-  letter-spacing: .04em;
-}
-header .menu ul li {
-  padding-left: 1.2vw;
-}
-header .menu ul li a:hover {
-  color: #B8B8B8;
-}
-header h3 {
-  padding-top: 10.317vw;
-  font-family: "arboria", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: .04em;
-  font-size: 13.75rem;
-  color: #565656;
-  width: 50.85vw;
 }
 main {
   padding-bottom: 13.22vh;
@@ -199,7 +208,7 @@ main .title {
   padding-bottom: 0.93vh;
 }
 main .role {
-  font-family: arboria, sans-serif;
+  font-family: "arboria", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 5.2rem;
@@ -1237,11 +1246,7 @@ main .contact .word {
   main .contact .word {
     font-weight: 300;
     font-size: 1.5rem;
-  }
-  /*wrapping-paper-page*/
-  h2 {
-    font-size: ;
-  }   
+  } 
   }  
 @media screen and (min-width: 2px) and (max-width: 390px) {
   header {

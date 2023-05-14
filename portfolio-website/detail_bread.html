@@ -9,6 +9,16 @@
     <title>rera shimizu</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+      (function(d) {
+        var config = {
+          kitId: 'uqm4qdg',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+    <script>
     $(function(){
       var loader = $('.loader-wrap');
 
@@ -29,7 +39,7 @@
       })(document);
     </script>
   </head>
-  <body>
+  <body>        
     <div class="loader-wrap">
     <div class="loader">Loading...</div></div>
     <div class="wrap">
@@ -59,6 +69,18 @@
           </ul>
         </nav>
       </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="globalMenuSp">
+          <ul>
+              <li><a href="index.html">Works</a></li>
+              <li><a href="about.html">About</a</li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+
     </header>
 
     <main>
@@ -113,7 +135,7 @@
     <div class="more">
       <h2><a href=index.html>More Work</a></h2>
       <p class="more-img01"><a href="detail_accessories.html"><img src="img/pc-work-accessories.jpg" alt="accessories photo"></a></p>
-      <p class="more-img02"><a href="#"><img src="img/pc-work-rappingpaper.jpg" alt="rapping-paper photo"></a></p>
+      <p class="more-img02"><a href="detail_wrappingpaper.html"><img src="img/pc-work-rappingpaper.jpg" alt="rapping-paper photo"></a></p>
     </div>
   </main>
     <footer>
@@ -131,5 +153,27 @@
     </footer>
 </div>
   </body>
+  <script>
+    $(function() {
+    $('.hamburger').click(function() {
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        } 
+      
+    });
+});
+//メニュー内を閉じておく
+$(function() {
+    $('.globalMenuSp a[href]').click(function() {
+        $('.globalMenuSp').removeClass('active');
+$('.hamburger').removeClass('active');
+
+    });
+  });
+  </script>
 </html>
 

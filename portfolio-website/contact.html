@@ -36,20 +36,21 @@
           </ul>
         </nav>
       </div>
-    </header>
-
-    <main>
       <div class="hamburger">
         <span></span>
         <span></span>
       </div>
       <nav class="globalMenuSp">
           <ul>
-              <li><a href="index.html">Work</a></li>
-              <li><a href="about.html">About</a></li>
+              <li><a href="index.html">Works</a></li>
+              <li><a href="about.html">About</a</li>
               <li><a href="contact.html">Contact</a></li>
           </ul>
       </nav>
+
+    </header>
+
+    <main>
     <div class="main first">
       <div class="contact">
         <div class="name"><dl><div class="name-ja"><dt>清水レラ</dt></div><div class="name-e"><dd>RERA SHIMIZU</dd></div></dl></div>
@@ -76,6 +77,28 @@
       </div>
     </footer>
 </div>
+<script>
+  $(function() {
+  $('.hamburger').click(function() {
+      $(this).toggleClass('active');
+
+      if ($(this).hasClass('active')) {
+          $('.globalMenuSp').addClass('active');
+      } else {
+          $('.globalMenuSp').removeClass('active');
+      } 
+    
+  });
+});
+//メニュー内を閉じておく
+$(function() {
+  $('.globalMenuSp a[href]').click(function() {
+      $('.globalMenuSp').removeClass('active');
+$('.hamburger').removeClass('active');
+
+  });
+});
+</script>
   </body>
 </html>
 
