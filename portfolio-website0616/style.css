@@ -1,0 +1,1811 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6em;
+}
+body {
+  font-family: "arboria","hiragino-mincho-pron",sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: .04em;
+  color: #565656;
+}
+.wrap {
+  overflow: hidden;
+}
+header {
+  width: 100vw;
+  height:auto;
+  padding: 0 2.513vw 6.216vh;;
+  background-color: rgba(147, 147, 147, 0.06);
+  z-index: 2;
+}
+header .menu {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3.37vw;
+}
+header h1 img{
+  width: 16.59vw;
+}
+header .menu ul{
+  display: flex;
+  justify-content: space-between;
+  width: 29vw;
+  font-family: arboria, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 8.2rem;
+  letter-spacing: .04em;
+}
+header .menu ul li {
+  padding-left: 1.2vw;
+}
+header .menu ul li a:hover {
+  color: #B8B8B8;
+}
+header h3 {
+  padding-top: 10.317vw;
+  font-family: "arboria", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: .04em;
+  font-size: 13.75rem;
+  color: #565656;
+  width: 50.85vw;
+  line-height: 1.36em;
+}
+/*　ハンバーガーメニューボタン　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 20px;
+  top   : 20px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 1px ;
+  left    : 6px;
+  background : #565656;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 16px;
+}
+
+/* スマホメニューを開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  background :#565656;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform   : rotate(-30deg);
+  transform        : rotate(-30deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  top: 16px;
+  background :#565656;
+  -webkit-transform: rotate(30deg);
+  -moz-transform   : rotate(30deg);
+  transform        : rotate(30deg);
+}
+
+/* メニュー背景　*/
+nav.globalMenuSp {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #565656;
+  background: url(img/pc-main-bg.jpg) center/cover;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: none;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  padding: 13.87vh 0 0 10.66vw;
+  width: 100%;
+}
+
+nav.globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  transition: .4s all;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: #565656;
+  font-size: 2.5rem;
+  letter-spacing: .04em;
+  font-weight: 400;
+  padding: 1em 0;
+  text-decoration :none;
+}
+nav.globalMenuSp ul li a:hover {
+color: #B8B8B8;
+}
+/* クリックでjQueryで追加・削除 */
+nav.globalMenuSp.active {
+  opacity: 100;
+  display: block;
+}
+main:not(#transparent) {
+  padding-bottom: 13.22vh;
+  background-color: #fff;
+}
+#transparent {
+  margin-bottom: 13.22vh;
+}
+main .first::after{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(img/pc-main-bg.jpg) center/cover;;
+  z-index: -1;
+}
+main .design {
+  padding-left: 2.513vw;
+  padding-right: 2.513vw;
+  padding-bottom: 9.27vh;
+  width: 46.82vw;
+  height: auto;
+  z-index: 2;
+}
+main .design img {
+  width: 46.82vw;
+  height: auto;
+  padding-bottom: 3.125vw;
+  object-fit: cover;
+}
+main .design img:hover {
+  filter: brightness(85%);
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+  transition-delay: 0ms;
+}
+main .left {
+  padding-top: 12.29vh;
+  padding-left: 18.58vh;
+  padding-bottom: 8.34vh;
+}
+main .reverse {
+  padding-top: 12.29vh;
+  padding-left: 34.58vw;
+  padding-bottom: 8.34vh;
+  width: 100vw;
+}
+main .title {
+  font-family: "arboria", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20rem;
+  letter-spacing: .04em;
+  color: #565656;
+  padding-bottom: 0.93vh;
+}
+main .role {
+  font-family: "arboria", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 5.2rem;
+  letter-spacing: .04em;
+  color: #565656;
+  padding-bottom: 0.93vh;
+}
+main .classification {
+  font-family: "arboria", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 5.2rem;
+  letter-spacing: .02em;
+  color: #565656;
+}
+/*--ここからdetail_breadのページ*/
+main .main {
+  margin-bottom: 13.22vh;
+}
+main h1 {
+  font-size: 13.77rem;
+  padding-top: 8.43vh;
+  padding-bottom: 8.64vh;
+  padding-left: 2.513vw;
+  padding-right: 2.513vw;
+}
+main .kv .caption {
+  display: flex;
+  padding-left: 2.513vw;
+  padding-right: 2.513vw;
+  letter-spacing: .02em;
+}
+main .kv dl {
+  padding-right: 4.10vw;
+}
+main .kv .caption dt {
+  font-family: "arboria", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.60rem;
+  color: #979797;
+  padding-bottom: 0.729vh;
+}
+main .kv .caption dd {
+  font-family: "arboria", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.60rem;
+  padding-bottom: 7.70vh;
+}
+main .kv img {
+  width: 94.974vw;
+  display: block;
+  margin: 0 auto;
+}
+main .detail {
+  display: grid;
+  grid-template-columns: 46.82vw 39.61vw;
+  grid-template-rows: 18.85vh 40vh;
+  column-gap: 1.32vw;
+  padding-top: 11.77vh;
+  padding-left: 2.513vw;
+  padding-right: 9.72vw;
+  padding-bottom: 7.29vh;
+}
+main .detail .explanation {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+main .detail .detail-explain {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  font-size: 3.17rem;
+  line-height: 181%;
+}
+main .detail .detail-explain p {
+  padding-bottom: 4.16vh;
+}
+main .detail .overview {
+  font-size: 3.60rem;
+  margin-bottom: 1.35vh;
+}
+main h2 {
+  font-size: 11.0rem;
+  margin-bottom: 1.35vh;
+  letter-spacing: .04em;
+  line-height: 1.36em;
+  width: 44.90vw;
+}
+main .detail .e-ja {
+  font-size: 3.17rem;
+  letter-spacing: .02em;
+}
+main .design-detail {
+  margin: 0 auto;
+}
+main .design-detail .detail-img {
+  padding-left: 2.513vw;
+  padding-right: 2.513vw;
+}
+main .design-detail .detail-img03 {
+  display: grid;
+  grid-template-columns: 36.37vw 14.74vw;
+  grid-column-gap: 4.76vw;
+  grid-template-rows: 100%;
+  background-color: #FDFAF7;
+  padding-top: 10.41vh;
+  padding-bottom: 10.41vh;
+  padding-left: 19.44vw;
+  padding-right: 19.44vw;
+  margin-left: 2.513vw;
+  margin-right: 2.513vw;
+  width: auto;
+}
+main .design-detail .pc-img03 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+main .desgin-detail .sp-img03 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+main .design-detail img{
+  width: 100%;
+  padding-bottom: 7.29vh;
+}
+main .design-variations {
+  padding-left: 2.513vw;
+  padding-right: 2.513vw;
+}
+main .design-variations h2 {
+  padding-top: 25.31vh;
+  padding-bottom: 11.80vh;
+  letter-spacing: .04em;
+}
+main .variations-img {
+  display: grid;
+  grid-template-columns: 36.37vw, 36.37vw;
+  grid-column-gap: 5.55vw;
+  grid-template-rows: auto;
+  background-color: #FDFAF7;
+  padding-left: 8.20vw;
+  padding-right: 8.20vw;
+  padding-top: 10.41vh;
+  padding-bottom: 10.41vh;
+  width: 100%;
+}
+main .variations-img .variations-img01 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+main .variations-img .variations-img02 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+main .variations-img img {
+  width: 100%;
+}
+.more h2 {
+  font-size: 11.0rem;
+  letter-spacing: .04em;
+  padding-top: 5vh;
+  margin-bottom: 0;
+  padding-left: 2.513vw;
+}
+.more {
+  border-top: 2px solid #F1F2F5;
+  border-bottom: 2px solid #F1F2F5;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 100%;
+  height: 67.18vh;
+}
+.more img:hover{
+    filter: brightness(85%);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    transition-delay: 0ms;
+}
+.more-img01 img {
+  height: 57.91vh;
+  width: 26.78vw;
+  object-fit: cover;
+  object-position: 65% 100%;
+}
+.more-img02 img {
+  height: 57.91vh;
+  width: 26.78vw;
+  object-fit: cover;
+  object-position: 40% 100%;
+}
+h2 {
+  grid-column: 1 / 2;
+}
+.more h2 a:hover {
+  color: #F1F2F5;
+  filter: brightness(97%);
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+  transition-delay: 0ms;
+}
+.more-img01 {
+  grid-column: 2 / 3;
+  border-left: 2px solid #F1F2F5;
+  border-right: 2px solid #F1F2F5;
+  padding-top: 5.0vh;
+  padding-right: 2.64vw;
+  padding-left: 2.64vw;
+  padding-bottom: 4.27vh;
+}
+.more-img02 {
+  grid-column: 3 / 4;
+  border-right: 2px solid #F1F2F5;
+  padding-top: 5.0vh;
+  padding-right: 2.64vw;
+  padding-left: 2.64vw;
+  padding-bottom: 4.27vh;
+}
+/*accessories detail page*/
+main .accessories .design-detail .detail-img03 {
+  background-color: #F7f7f7;
+  }
+main .accessories .design-variations {
+    display: none;
+  }
+/*temple detail page*/
+main .temple .design-detail .detail-img03 {
+  background-color: #f7f7f7;
+}
+main .temple .design-variations {
+  display: none;
+}
+/*about page*/
+main h1 {
+  font-size: 11.0rem;
+  letter-spacing: .04em;
+}
+main .profiel {
+  width: 100%;
+  margin: 0 2.51vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-template-rows: 3.020vh 7.91vh 21.14vh 2.08vh;
+  grid-row-gap: 5.41vh;
+  }
+main .profiel-photo {
+  grid-column: 2/3;
+  grid-row: 1/5;
+  width: 1fr;
+  height: auto;
+  }
+main .profiel .about {
+  grid-column: 4/6;
+  grid-row: 1/2;
+}
+main .profiel .name {
+  display: flex;
+}
+main .profiel .about .name-ja {
+  font-size: 6.44rem;
+  padding-right: 2.11vw;
+  float: left;
+}
+main .profiel .about .name-e {
+  font-size: 7.1rem;
+  padding-right: 2.11vw;
+  letter-spacing: .2em;
+  float: left;
+}
+main .profiel-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .profiel .cv {
+  font-size: 4.9rem;
+  grid-column: 4/6;
+  grid-row: 2/4;
+}
+main .profiel .cv dl dt {
+  font-family: "arboria",sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: .2em;
+}
+.cv dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5.41vh;
+}
+.cv dl dt {
+  width: 30%;
+  padding-bottom: 1.04vh;
+}
+.cv dl dd {
+  width: 70%;
+  padding-bottom: 1.04vh;
+}
+.profiel .ViewWorks {
+  grid-column: 4/5;
+  grid-row: 4/5;
+  display: flex;
+  letter-spacing: .2em;
+}
+main .profiel .line {
+  display: block;
+}
+main .profiel .line img {
+  width: 5.4vw;
+  height: auto;
+  margin-right: 2.11vw;
+  padding-bottom: 2.5vh;
+  transform: scale(1, 0.5)
+}
+main .profiel .word {
+  font-size: 5.085rem;
+}
+main .profiel p a:hover {
+  color: #B8B8B8;
+}
+/*contact-page*/
+main .contact {
+  width: 100vw;
+  padding-top: 19.16vh;
+  padding-left: 6.41vw;
+  margin: 0 2.51vw 25.5vh;
+  height: 35vh;
+  display: flex;
+  }
+  main .contact .name {
+  float: left;
+  padding-right: 16.53vw;
+  }
+  main .cotnact .contact-detail {
+    float: left;
+  }
+main .contact .name .name-ja {
+    font-size: 6.44rem;
+    padding-bottom: 12px;
+}
+main .contact .name .name-e {
+    font-size: 7.1rem;
+    letter-spacing: .02em;
+}
+main .contact .contact-detail {
+  font-size: 5.0rem;
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+.contact .ViewWorks {
+  padding-top: 2.08vh;
+  display: flex;
+  letter-spacing: .02em;
+}
+main .contact .line {
+  display: block;
+}
+main .contact .line img {
+  width: 5.4vw;
+  height: auto;
+  margin-right: 2.11vw;
+  padding-bottom: 4.5vh;
+  transform: scale(1, 0.5)
+}
+main .contact .word {
+  font-size: 5.085rem;
+}
+main .contact p a:hover {
+  color: #B8B8B8;
+}
+/*footer*/
+footer {
+  background-color: rgba(147, 147, 147, 0.1);
+  padding-top: 4.89vh;
+  padding-left: 2.51vw;
+  padding-right: 2.51vw;
+  padding-bottom: 1.45vh;
+  text-align: center;
+}
+footer img {
+  width: 7.60vw;
+  height: auto;
+}
+footer .footer-menu {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-menu ul {
+  display: flex;
+  justify-content: space-between;
+  font-family: arboria, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4.2rem;
+  letter-spacing: .04em;
+  width: 18.91vw;
+  padding-bottom: 10.2vh ;
+}
+footer .footer-menu ul li a:hover {
+  color: #B8B8B8;
+}
+footer small {
+  display: inline-block;
+  font-family: "arboria", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 5.2rem;
+  letter-spacing: .02em;
+  color: #565656;
+}
+
+/*ここからレスポンシブ設定*/
+@media screen and (min-width: 2500px) and (max-width: 4800px) {
+  .hamburger {
+    display: none;
+  }
+  nav.globalMenuSp {
+    z-index : -1;
+  }
+  header .menu ul{
+    font-size: 4.27rem;
+  }
+  header h3 {
+    font-size: 7.68rem;
+  }
+  main .title {
+    font-size: 11.18rem;
+  }
+  main .role {
+    font-size: 2.89rem;
+  }
+  main .classification {
+    font-size: 2.89rem;
+  }
+  footer .footer-menu ul {
+    font-size: 2.89rem;
+  }
+  footer small {
+    font-size: 2.89rem;
+  }
+  /*--ここからdetail_breadのページ*/
+  main h1 {
+    font-size: 13.77rem;
+  }
+  main .kv .caption dt {
+    font-size: 3.60rem;
+  }
+  main .kv .caption dd {
+    font-size: 3.60rem;
+  }
+  main .detail .detail-explain {
+    font-size: 3.17rem;
+  }
+  main .detail .overview {
+    font-size: 3.60rem;
+  }
+  main h2 {
+    font-size: 8.0rem;
+    width: 44.90vw;
+  }
+  main .detail .e-ja {
+    font-size: 3.17rem;
+  }
+  .more h2 {
+    font-size: 11.0rem;
+  }
+  /*ここからabout_page*/
+  main .profiel .about .name-ja {
+    font-size: 3.99rem;
+  }
+  main .profiel .about .name-e {
+    font-size: 3.99rem;
+  }
+  main .profiel .cv {
+    font-size: 2.7rem;
+  }
+  main .profiel .word {
+    font-size: 2.86rem;
+  }
+    /*ここからcontact_page*/
+    main .contact .name .name-ja {
+      font-size: 3.62rem;
+      padding-bottom: 7px;
+  }
+  main .contact .name .name-e {
+      font-size: 3.99rem;
+  }
+  main .contact .contact-detail {
+    font-size: 2.81rem;
+  }
+  main .contact .word {
+    font-size: 2.81rem;
+  }
+  }
+@media screen and (min-width: 1880px) and (max-width: 2500px) {
+  .hamburger {
+    display: none;
+  }
+  nav.globalMenuSp {
+    z-index : -1;
+  }
+  header .menu ul{
+    font-size: 3.043rem;
+  }
+  header h3 {
+    font-size: 5.49rem;
+  }
+  main .title {
+    font-size: 7.99rem;
+  }
+  main .role {
+    font-size: 2.07rem;
+  }
+  main .classification {
+    font-size: 2.07rem;
+  }
+  footer .footer-menu ul {
+    font-size: 1.67rem;
+  }
+  footer small {
+    font-size: 2.07rem;
+  }
+  /*--ここからdetail_breadのページ*/
+  main h1 {
+    font-size: 9.79rem;
+  }
+  main .kv .caption dt {
+    font-size: 2.55rem;
+  }
+  main .kv .caption dd {
+    font-size: 2.55rem;
+  }
+  main .detail .detail-explain {
+    font-size: 2.25rem;
+  }
+  main .detail .overview {
+    font-size: 2.55rem;
+  }
+  main h2 {
+    font-size: 5.6rem;
+  }
+  main .detail .e-ja {
+    font-size: 2.25rem;
+  }
+  .more h2 {
+    font-size: 7.82rem;
+  }
+  /*ここからabout_page*/
+  main .profiel .about .name-ja {
+    font-size: 3.24rem;
+  }
+  main .profiel .about .name-e {
+    font-size: 2.83rem;
+  }
+  main .profiel .cv {
+    font-size: 1.9rem;
+  }
+  main .profiel .word {
+    font-size: 2.0rem;
+  }
+  main .profiel .line img {
+    padding-bottom: 2.5vh;
+  }
+  /*ここからcontact_page*/
+  main .contact .name .name-ja {
+    font-size: 2.57rem;
+    padding-bottom: 7px;
+}
+main .contact .name .name-e {
+    font-size: 2.83rem;
+}
+main .contact .contact-detail {
+  font-size: 1.99rem;
+}
+main .contact .word {
+  font-size: 1.99rem;
+}  
+}
+@media screen and (min-width: 781px) and (max-width: 1879px) {
+  .hamburger {
+    display: none;
+  }
+  nav.globalMenuSp {
+    z-index : -1;
+  }
+  header .menu ul{
+    font-size: 2.245rem;
+  }
+  header h3 {
+    font-size: 4.05rem;
+  }
+  main .title {
+    font-size: 3.0rem;
+  }
+  main .role {
+    font-size: 1.7rem;
+  }
+  main .classification {
+    font-size: 1.7rem;
+  }
+  footer .footer-menu ul {
+    font-size: 1.6rem;
+  }
+  footer small {
+    font-size: 1.7rem;
+  }
+    /*--ここからdetail_breadのページ*/
+  main h1 {
+    font-size: 7.22rem;
+  }
+  main .kv .caption dt {
+      font-size: 1.88rem;
+  }
+  main .kv .caption dd {
+    font-size: 1.88rem;
+  }
+  main .detail {
+    grid-template-rows: 18.85vh auto;
+  }
+  main .detail .detail-explain {
+    font-size: 1.66rem;
+    height: auto;
+  }
+  main .detail .overview {
+    font-size: 1.66rem;
+  }
+  main h2 {
+    font-size: 5.2rem;
+    line-height: 126%;
+    padding-bottom: 1.35vh;
+  }
+  main .detail .e-ja {
+    font-size: 1.66rem;
+  }
+  .more h2 {
+    font-size: 5.77rem;
+    }
+/*about-page*/
+main .profiel .about .name-ja {
+  font-size: 1.9rem;
+}
+main .profiel .about .name-e {
+  font-size: 2.1rem;
+}
+main .profiel .cv {
+  font-size: 1.5rem;
+}
+main .profiel .word {
+  font-size: 1.5rem;
+}
+main .profiel .line img {
+  padding-bottom: 2.5vh;
+}
+  /*ここからcontact_page*/
+main .contact {
+  display: block;
+}
+main .contact .name {
+  float: none;
+  }
+  main .cotnact .contact-detail {
+  float: none;
+}  
+main .contact .name .name-ja {
+  font-size: 1.9rem;
+}
+main .contact .name .name-e {
+    font-size: 1.8rem;
+    padding-bottom: 3.74vh;
+}
+main .contact .contact-detail {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+main .contact .contact-detail p {
+  display: block;
+  padding-bottom: 0.89vh
+}
+main .contact .word {
+  font-weight: 300;
+  font-size: 1.5rem;
+}  
+  }
+  @media screen and (min-width: 391px) and (max-width: 780px) {
+    header {
+      padding: 0 2.513vw;
+      background-color: rgba(147, 147, 147, 0);
+      z-index: 2;
+    }
+    header .menu {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 3.37vw;
+    }
+    header h1 img{
+      width: 37.33vw;
+    }
+    header .menu ul{
+      display: none;
+    }
+    header h3 {
+      padding-top: 4.19;
+      padding-bottom: 2.84vh;
+      font-family: "arboria", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: .00.04em;
+      font-size: 3.35rem;
+      color: #565656;
+      width: 92.53vw;
+    }
+    main {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+    main .first::after{
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url(img/pc-main-bg.jpg) center/cover;;
+      z-index: -1;
+    }
+    main .design {
+      padding-left: 3.73vw;
+      padding-right: 3.73vw;
+      width: 92.54vw;
+      height: auto;
+      z-index: 2;
+    }
+    main .left {
+      padding-top: 5vh;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0 auto;
+    }  
+    main .reverse {
+      padding-top: 5vh;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0 auto;
+    }  
+    main .design img {
+      width: 100%;
+      height: 40vh;
+      object-fit: cover;
+    }
+    main .design img:hover {
+      filter: brightness(85%);
+      transition-duration: 300ms;
+      transition-timing-function: ease-in;
+      transition-delay: 0ms;
+    }
+    main .title {
+      font-family: "arboria", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 1.6875rem;
+      letter-spacing: .00.04em;
+      color: #565656;
+    }
+    main .role {
+      font-family: arboria, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 0.9375rem;
+      letter-spacing: .0.02em;
+      color: #565656;
+    }
+    main .classification {
+      font-weight: 400;
+      font-size: 0.9375rem;
+      letter-spacing: .0.02em;
+    }
+    footer {
+      padding-top: 4.89vh;
+      padding-left: 3.73vw;
+      padding-bottom: 1.45vh;
+      text-align: initial;
+      height: auto;
+    }
+    footer .footer-menu {
+      display: block
+    }
+    footer .footer-menu img {
+      margin-top: 16.64vh;
+      position: absolute;
+      width: 27.2vw;
+      height: auto;
+      padding-bottom: 0;
+    }
+    footer .footer-menu ul {
+      display: block;
+      font-size: 1.7rem;
+    }
+    footer .footer-menu ul li {
+      padding-bottom: 0.899vh;
+    }
+    footer .footer-small {
+      text-align: center;
+    }
+    footer small {
+      display: inline-block;
+      font-size: 0.9375rem;
+      padding-top: 7.5vh;
+      font-family: "arboria", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    /*--ここからdetail_breadのページ*/
+    header {
+      padding-bottom: 6.086vh;
+    }
+    main {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 5.2vh;
+    }  
+    main .kv .caption {
+      display: block;
+    }
+    main h1 {
+      padding-left: 3.733vw;
+      padding-right: 3.733vw;
+      font-size: 3.0rem;
+      letter-spacing: .00.04em;
+      width: 78.66vw;
+      line-height: 113%;
+    }
+    main .caption {
+      padding-left: 3.733vw;
+      padding-right: 3.733vw;
+    }
+    main .kv dl {
+      padding-right: 0;
+      padding-bottom: 3.91vh;
+    }
+    main .kv .caption dt {
+      font-family: "arboria", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.7rem;
+      padding-bottom: 0.14vh;
+    }
+    main .kv .caption dd {
+      font-family: "arboria", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.2rem;
+      padding-bottom: 0.14vh;
+    }
+    .kv .kv-img {
+      width: 100vw;
+      padding-top: 3.59vh;
+    }
+  .kv .kv-img img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: 45% 100%;
+    }
+    main .detail {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 22.33vh auto;
+      grid-row-gap: 5.99vh;
+      padding-top: 4.20vh;
+      padding-left: 3.733vw;
+      padding-right: 3.733vw;
+      padding-bottom: 0;
+    }
+    main .detail .detail-explain {
+      height: auto;
+    }
+    main .detail .detail-explain p{
+      padding-bottom: 0;
+    }
+    main .design-detail .detail-img {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    main .detail .explanation {
+      width: 100vw;
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+    main .detail .detail-explain {
+      width: 100%;
+      grid-row: 2/3;
+      grid-column: 1/2;
+      font-size: 1.5rem;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .detail .explanation .overview {
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.6rem;
+      margin-bottom: 0;
+      padding-bottom: 0.72vh;
+    }
+    .detail .explanation h2 {
+      font-size: 3rem;
+      width: 78.66vw;
+      padding-bottom: 3.33vh;
+      line-height: 113%;
+    }
+    .detail .explanation .e-ja {
+      font-size: 1.7rem;
+      width: 100vh;
+      padding-bottom: 5.79vh;
+    }
+    main .detail .detail-explain p {
+      padding-bottom: 2.89vh;
+      line-height: 202%;
+    }
+    main .design-detail img {
+      padding-bottom: 0;
+    }
+    main .design-detail .detail-img {
+      padding-bottom: 9.13vh;
+    }
+    main .design-detail .detail-img03 {
+      display: grid;
+      grid-template-columns: 55.46vw 26.66vw;
+      grid-column-gap: 10.42vw;
+      grid-template-rows: 100%;
+      background-color: #FDFAF7;
+      padding-left: 3.73vw;
+      padding-right: 3.73vw;
+      padding-top: 3.333vh;
+      padding-bottom: 3.333vh;
+      margin-right: 0;
+      margin-left: 0;
+      width: auto;
+    }
+    main .design-detail .pc-img03 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    main .desgin-detail .sp-img03 {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    main .design-variations {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    main .design-variations h2 {
+      font-size: 3rem;
+      width: 100vw;
+      padding-left: 3.73vw;
+      padding-right: 3.73vw;
+      padding-top: 6.23vh;
+      padding-bottom: 5.50vh;
+    }
+    main .design-variations .detail-img {
+      padding-top: 3.33vh;
+      padding-bottom: 3.33vh;
+    }
+    main .design-variations .variations-img {
+      margin: 0;
+      padding-top: 3.44vh;
+      padding-bottom: 3.44vh
+    }
+    main .design-variations .variations-img img {
+      width: 100%;
+    }
+    .more {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 5.36vh 35vh 35vh;
+      grid-row-gap: 6vh;
+      padding-left: 3.86vw;
+      padding-right: 3.86vw;
+      padding-top: 0;
+      padding-bottom: 12vh;
+      border-top: none;
+      border-bottom: none; 
+      height: auto; 
+    }
+    .more h2 {
+      grid-column: 1 /1;
+      grid-row: 1/2;
+      font-size: 3rem;
+      padding-top: 0;
+      padding-bottom: 1.88vh;
+      border-right: none;
+    }
+    .more-img01 {
+      grid-column: 1/1;
+      grid-row: 2/ 3;
+      width: 100%;
+      padding: 0; 
+    }
+    .more-img02 {
+      grid-column: 1/1;
+      grid-row: 3/4;
+      padding: 0;
+    }
+    .more img {
+      width: 100%;
+      height: 35vh;
+      object-fit: cover;
+    }
+    /*about-page*/
+    main .main {
+      padding-bottom: 10.43vh;
+    }
+    main .first {
+      margin-bottom:0;
+    }
+    main .profiel-title {
+      display: none;
+    }
+    main .profiel {
+      padding: 6.81vh 3.75vw 0;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 5.83vh 36.66vh 15.50vh 22vh 1.97vh;
+      grid-row-gap:  7.68vh;
+      margin:0;
+      width: 100vw;
+    }
+    main .profiel .about {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    main .profiel .about .name-ja {
+      font-size: 1.9rem;
+      float: none;
+      padding-bottom: 0.86vh;
+    }
+    main .profiel .about .name-e {
+      font-size: 1.8rem;
+      float: none;
+    }
+    main .profiel-photo {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      width: 45.6vw;
+      height: 100%;
+      margin: 0 auto;
+      }
+    main .profiel-photo img {
+      object-fit: cover;
+      object-position: 100% 30%;
+    }
+    main .profiel .cv {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      grid-column: 1/2;
+      grid-row: 3/5;
+    }
+    .cv {
+      margin-bottom: 10.43vh;
+    }
+    .cv dl dt {
+      width: 25%;
+      padding-bottom: 1.0vh;
+    }
+    .cv dl dd {
+      width: 75%;
+      padding-bottom: 1.0vh;
+    }
+    .profiel .ViewWorks {
+      grid-column: 1/2;
+      grid-row: 5/6;
+    }
+    main .profiel .line img {
+      width: 20vw;
+      margin-right: 4vw;
+      padding-bottom: 5.0vh;
+    }
+    main .profiel .word {
+      font-size: 1.5rem;
+    }
+      /*ここからcontact_page*/
+  main .contact {
+    display: block;
+  }
+  main .contact .name {
+    float: none;
+    }
+    main .cotnact .contact-detail {
+    float: none;
+  }  
+  main .contact .name .name-ja {
+    font-size: 1.9rem;
+  }
+  main .contact .name .name-e {
+      font-size: 1.8rem;
+      padding-bottom: 3.74vh;
+  }
+  main .contact .contact-detail {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  main .contact .contact-detail p {
+    display: block;
+    padding-bottom: 0.89vh
+  }
+  main .contact .word {
+    font-weight: 300;
+    font-size: 1.5rem;
+  } 
+  }  
+@media screen and (min-width: 2px) and (max-width: 390px) {
+  header {
+    padding: 0 2.513vw;
+    background-color: rgba(147, 147, 147, 0);
+    z-index: 2;
+  }
+  header .menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3.37vw;
+  }
+  header h1 img{
+    width: 37.33vw;
+  }
+  header .menu ul{
+    display: none;
+  }
+  header h3 {
+    padding-top: 4.19;
+    padding-bottom: 2.84vh;
+    font-family: "arboria", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: .00.04em;
+    font-size: 3.35rem;
+    color: #565656;
+    width: 92.53vw;
+  }
+  main {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  main .first::after{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(img/pc-main-bg.jpg) center/cover;;
+    z-index: -1;
+  }
+  main .design {
+    padding-left: 3.73vw;
+    padding-right: 3.73vw;
+    padding-bottom: 0;
+    width: 92.54vw;
+    height: 43.62vh;
+    z-index: 2;
+  }
+  main .left {
+    padding-top: 2.84vh;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }  
+  main .reverse {
+    padding-top: 2.84vh;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }  
+  main .design img {
+    width: 100%;
+    height: 28.48vh;
+    object-fit: cover;
+  }
+  main .design img:hover {
+    filter: brightness(85%);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    transition-delay: 0ms;
+  }
+  main .title {
+    font-family: "arboria", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.6875rem;
+    letter-spacing: .00.04em;
+    color: #565656;
+  }
+  main .role {
+    font-family: arboria, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9375rem;
+    letter-spacing: .0.02em;
+    color: #565656;
+  }
+  main .classification {
+    font-weight: 400;
+    font-size: 0.9375rem;
+    letter-spacing: .0.02em;
+  }
+  footer {
+    padding-top: 6.44vh;
+    padding-left: 3.73vw;
+    padding-bottom: 2.39vh;
+    text-align: initial;
+    height: auto;
+  }
+  footer .footer-menu {
+    display: block
+  }
+  footer .footer-menu img {
+    margin-top: 19.64vh;
+    position: absolute;
+    width: 27.2vw;
+    padding-bottom: 11.85vh;
+  }
+  footer .footer-menu ul {
+    display: block;
+    font-size: 1.7rem;
+  }
+  footer .footer-menu ul li {
+    padding-bottom: 0.899vh;
+  }
+  footer .footer-small {
+    text-align: center;
+  }
+  footer small {
+    display: inline-block;
+    font-size: 0.9375rem;
+    padding-top: 7.5vh;
+    font-family: "arboria", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  /*--ここからdetail_breadのページ*/
+  header {
+    padding-bottom: 6.086vh;
+  }
+  main {
+    padding-left: 0;
+    padding-right: 0;
+  }  
+  main .kv .caption {
+    display: block;
+  }
+  main h1 {
+    padding-left: 3.733vw;
+    padding-right: 3.733vw;
+    font-size: 3.0rem;
+    letter-spacing: .00.04em;
+    width: 78.66vw;
+  }
+  main .caption {
+    padding-left: 3.733vw;
+    padding-right: 3.733vw;
+  }
+  main .kv dl {
+    padding-right: 0;
+    padding-bottom: 3.91vh;
+  }
+  main .kv .caption dt {
+    font-family: "arboria", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.7rem;
+    padding-bottom: 0.14vh;
+  }
+  main .kv .caption dd {
+    font-family: "arboria", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    padding-bottom: 0.14vh;
+  }
+  .kv .kv-img {
+    width: 100vw;
+    padding-top: 3.59vh;
+  }
+.kv .kv-img img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: 45% 100%;
+  }
+    main .detail {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 26.34vh auto;
+      grid-row-gap: 5.99vh;
+      padding-top: 4.20vh;
+      padding-left: 3.733vw;
+      padding-right: 3.733vw;
+      padding-bottom: 0;
+    }
+  main .design-detail .detail-img {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  main .detail .explanation {
+    width: 100vw;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  main .detail .detail-explain {
+    width: 100%;
+    height: auto;
+    grid-row: 2;
+    grid-column: 1;
+    font-size: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 11.45vh;
+  }
+  .detail .explanation .overview {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    padding-bottom: 0.72vh;
+  }
+  .detail .explanation h2 {
+    font-size: 3rem;
+    width: 78.66vw;
+    padding-bottom: 3.44vh;
+    line-height: 113%;
+  }
+  .detail .explanation .e-ja {
+    font-size: 1.7rem;
+    width: 100vh;
+    padding-bottom: 5.79vh;
+  }
+  main .detail .detail-explain p {
+    padding-bottom: 2.89vh;
+    line-height: 202%;
+  }
+  main .design-detail img {
+    padding-bottom: 0;
+  }
+  main .design-detail .detail-img {
+    padding-bottom: 9.13vh;
+  }
+  main .design-detail .detail-img03 {
+    display: grid;
+    grid-template-columns: 55.46vw 26.66vw;
+    grid-column-gap: 10.42vw;
+    grid-template-rows: 100%;
+    background-color: #FDFAF7;
+    padding-top: 3.44vh;
+    padding-bottom: 3.44vh;
+    padding-left: 3.73vw;
+    padding-right: 3.73vw;
+    margin-right: 0;
+    margin-left: 0;
+    width: auto;
+  }
+  main .design-detail .pc-img03 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  main .desgin-detail .sp-img03 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  main .design-variations {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  main .design-variations h2 {
+    font-size: 3rem;
+    width: 100vw;
+    padding-left: 3.73vw;
+    padding-right: 3.73vw;
+    padding-top: 10.43vh;
+    padding-bottom: 3.62vh;
+    margin-bottom: 0;
+  }
+  main .variations-img {
+    padding-top: 3.44vh;
+    padding-bottom: 3.44vh;
+  }
+  main .design-variations .variations-img {
+    margin: 0;
+    padding-left: 3.73vw;
+    padding-right: 3.73vw;
+  }
+  main .design-variations .variations-img img {
+    width: 100%;
+  }
+  .more {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5.36vh 28.11vh 28.11vh;
+    grid-row-gap: 3.62vh;
+    padding-left: 3.86vw;
+    padding-right: 3.86vw;
+    padding-top: 0;
+    padding-bottom: 9.85vh;
+    border-top: none;
+    border-bottom: none; 
+    height: auto; 
+  }
+  .more h2 {
+    grid-column: 1 /1;
+    grid-row: 1/2;
+    font-size: 3rem;
+    padding-top: 0;
+    padding-bottom: 1.88vh;
+    border-right: none;
+  }
+  .more-img01 {
+    grid-column: 1/1;
+    grid-row: 2/ 3;
+    width: 100%;
+    padding: 0 ; 
+  }
+  .more-img02 {
+    grid-column: 1/1;
+    grid-row: 3/4;
+    padding: 0;
+  }
+  .more img {
+    width: 100%;
+    height: 28.11vh;
+    object-fit: cover;
+  }
+  /*about-page*/
+  main .main {
+    padding-bottom: 10.43vh;
+  }
+  main .first {
+    margin-bottom:0;
+  }
+  main .profiel-title {
+    display: none;
+  }
+  main .profiel {
+    padding: 6.81vh 3.75vw 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5.83vh 36.66vh 15.50vh 22vh 1.97vh;
+    grid-row-gap:  7.68vh;
+    margin:0;
+    width: 100vw;
+  }
+  main .profiel .about {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  main .profiel .about .name-ja {
+    font-size: 1.9rem;
+    float: none;
+    padding-bottom: 0.86vh;
+  }
+  main .profiel .about .name-e {
+    font-size: 1.8rem;
+    float: none;
+  }
+  main .profiel-photo {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 45.6vw;
+    height: 100%;
+    margin: 0 auto;
+    }
+  main .profiel-photo img {
+    object-fit: cover;
+    object-position: 100% 30%;
+  }
+  main .profiel .cv {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    grid-column: 1/2;
+    grid-row: 3/5;
+  }
+  .cv {
+    margin-bottom: 10.43vh;
+  }
+  .cv dl dt {
+    width: 25%;
+    padding-bottom: 1.0vh;
+  }
+  .cv dl dd {
+    width: 75%;
+    padding-bottom: 1.0vh;
+  }
+  .profiel .ViewWorks {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    padding-top: 20vh;
+  }
+  main .profiel .line img {
+    width: 20vw;
+    margin-right: 4vw;
+    padding-bottom: 5.0vh;
+  }
+  main .profiel .word {
+    font-size: 1.5rem;
+  }
+    /*ここからcontact_page*/
+main .contact {
+  display: block;
+}
+main .contact .name {
+  float: none;
+  }
+  main .cotnact .contact-detail {
+  float: none;
+}  
+main .contact .name .name-ja {
+  font-size: 1.9rem;
+}
+main .contact .name .name-e {
+    font-size: 1.8rem;
+    padding-bottom: 3.74vh;
+}
+main .contact .contact-detail {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+main .contact .contact-detail p {
+  display: block;
+  padding-bottom: 0.89vh
+}
+main .contact .word {
+  font-weight: 300;
+  font-size: 1.5rem;
+} 
+}  
+
+  /*ここからpreloader-page*/
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader-wrap {
+  height: 100vh;
+}
+.loader {
+  color: #d2d2d2;
+  font-size: 10px;
+  margin: 40vh auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}

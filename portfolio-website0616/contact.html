@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lkc4uxo.css">
+    <link rel="stylesheet" href="style.css">
+    <title>rera shimizu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'uqm4qdg',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+    <header>
+      <div class="menu">
+        <h1>
+          <a href="index.html">
+          <img src="img/logo.png" alt="rerashimizu-logo">
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="globalMenuSp">
+          <ul>
+              <li><a href="index.html">Works</a></li>
+              <li><a href="about.html">About</a</li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+
+    </header>
+
+    <main>
+    <div class="main first">
+      <div class="contact">
+        <div class="name"><dl><div class="name-ja"><dt>清水レラ</dt></div><div class="name-e"><dd>RERA SHIMIZU</dd></div></dl></div>
+        <div class="contact-detail">
+          <p>Graphic, Web Textile Designer, Illustrator </p>
+          <p><a href="mailto:reramaama@gmail.com">Contact: reramaama@gmail.com</a></p>
+          <div class="ViewWorks"><p class="line"><img src="img/Line.png" alt="Line"></p><p class="word"><a href="index.html">View Works</a></p></div>
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <footer>
+      <div class="footer-menu">
+        <p><a href="index.html"><img src="img/logo-s.png" alt="rerashimizu"></a></p>
+        <ul>
+          <li><a href="index.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-small">
+      <p><small>Privacy Policy</small></p>
+      </div>
+    </footer>
+</div>
+<script>
+  $(function() {
+  $('.hamburger').click(function() {
+      $(this).toggleClass('active');
+
+      if ($(this).hasClass('active')) {
+          $('.globalMenuSp').addClass('active');
+      } else {
+          $('.globalMenuSp').removeClass('active');
+      } 
+    
+  });
+});
+//メニュー内を閉じておく
+$(function() {
+  $('.globalMenuSp a[href]').click(function() {
+      $('.globalMenuSp').removeClass('active');
+$('.hamburger').removeClass('active');
+
+  });
+});
+</script>
+  </body>
+</html>
+
